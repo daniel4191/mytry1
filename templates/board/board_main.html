@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    {% for post in posts %}
+        {% if not post %}
+            <h1>작성된 글이 없습니다.</h1>
+        {% else %}
+            
+        {% endif %}
+        <ul>{{post.id}}, {{post.title}}, {{post.date}}</ul>
+    {% endfor %}
+{% endblock content %}

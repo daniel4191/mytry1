@@ -1,5 +1,12 @@
 from django.shortcuts import render
 
+from .models import Post
 # Create your views here.
 def main_page(request):
-    return render(request, "board/main.html")
+    posts = Post.objects.all()
+    
+    context = {
+        "posts": posts
+    }
+    
+    return render(request, "board/board_main.html", context)
